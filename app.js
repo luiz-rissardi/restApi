@@ -1,10 +1,10 @@
-import { UserController } from "./backend/controller/controller.js";
-import { UserModel } from "./backend/modules/module.js";
-import { UserRoutes } from "./backend/routes/userRoutes.js";
+import { UserController } from "./dist/backend/controller/controller.js";
+import { UserModel } from "./dist/backend/modules/module.js";
+import { UserRoutes } from "./dist/backend/routes/userRoutes.js";
 import dotenv from "dotenv";
 import cors from "cors";
 import express, { json } from "express";
-import { Database } from "./backend/Db/Db.js";
+import { Database } from "./dist/backend/Db/Db.js";
 class App {
     constructor(exp, route, base) {
         this.exp = exp;
