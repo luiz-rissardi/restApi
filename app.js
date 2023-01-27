@@ -21,10 +21,10 @@ class App {
             this.aplication.use(json());
             this.aplication.use(cors());
             this.aplication.use("/api", this.routes.CreateRoutes());
-            this.aplication.listen(process.env.PORT || "3000", () => {
+            this.aplication.listen("3000", () => {
                 console.log("servidor rodando");
                 console.log("iniciando banco de dados...");
-                this.Database.Conect(String(process.env.CONNECT_STRING));
+                this.Database.Conect("mongodb+srv://Rissardi:UskF85KfCsXCsuXp@cluster0.oxqcfzm.mongodb.net/?retryWrites=true&w=majority");
             });
         }
         catch (error) {
